@@ -79,7 +79,7 @@ export default class Desafio extends Component{
         list.forEach((item) => this.pushOrSpliceSelectedItem(this.state.selectedItems, item))
     };
 
-    //set a specific item as true os false
+    //set a specific item as true or false
     selectOne = (e, index) => {
         let allSelected = true;
         const list = this.state.list;
@@ -139,6 +139,7 @@ export default class Desafio extends Component{
 
     //get card flag to change the card image and change input state
     getCardBrand = (event) =>{
+        let flag = '';
         let card = {...this.state.card};
         card.numero = event.target.value;
         let t = event.target.value;
@@ -160,9 +161,9 @@ export default class Desafio extends Component{
         for (let i in r)
             for (let a = 0; a < r[i].length; a++) {
                 let s, o, c = r[i][a];
-                let z = ((c.length > t.length) ? (s = t, o = c.substring(0, t.length)) : (s = t.substring(0, c.length), o = c), s == o && c.length > n && (e = i, n = c.length))
+                flag = ((c.length > t.length) ? (s = t, o = c.substring(0, t.length)) : (s = t.substring(0, c.length), o = c), s === o && c.length > n && (e = i, n = c.length))
             }
-        const flag = e ? n <= t.length ? e : "unknown" : "unknown";
+        flag = e ? n <= t.length ? e : "unknown" : "unknown";
         this.setState({flag})
     };
 
