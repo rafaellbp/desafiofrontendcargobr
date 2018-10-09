@@ -1,0 +1,27 @@
+header.header{
+    background-color: var(--blue);
+    padding: 0 15px;
+    overflow:hidden;
+    white-space: nowrap;
+    box-shadow: var(--shadow);
+}
+
+header.header h1{
+    margin-top: 1rem!important;
+    font-size: 1.4em;
+    color: #fff;
+}
+header.header p{
+    color: #fff !important;
+    font-size: 1em;
+    font-weight: 300
+}
+.flex-column {
+    flex-direction: column!important;
+}
+@media (min-width: 576px){
+    .d-sm-flex {
+        display: flex!important;
+    }
+}
+
