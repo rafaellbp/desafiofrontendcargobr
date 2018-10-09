@@ -7,7 +7,7 @@ import InputMask from 'react-input-mask'
 import {Checkbox, Table, Pagination, Button, Header, Step ,Modal, Icon, Grid, Message, Form, Loader} from 'semantic-ui-react'
 
 const headerProps = {
-    icon:'hand-spock-o',
+    icon:'hand spock outline',
     title:'Desafio',
     subtitle:'Desafio Frontend Cargobr'
 };
