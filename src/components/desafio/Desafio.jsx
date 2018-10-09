@@ -43,7 +43,7 @@ export default class Desafio extends Component{
         }
     }
 
-    //request of data and set state values checking selected items if a page change call
+    //request of data and set state values checking selected items if is a page change call
     componentWillMount(pageNumber){
         if(pageNumber)this.setState({page:parseInt(pageNumber), list:[], progress:true, allSelected:false});
         axios(`${baseUrl}&page=${pageNumber ? pageNumber : this.state.page}`)
@@ -72,7 +72,7 @@ export default class Desafio extends Component{
         window.scrollTo(0, 0);
     };
 
-    //set as true or false al documents
+    //set as true or false all documents
     selectAll = (e) => {
         const list = this.state.list.map(item => ({...item,checked:e.target.checked}));
         this.setState({list,allSelected:e.target.checked});
